@@ -12384,3 +12384,59 @@ body .mfp-wrap .mfp-container .mfp-content .mfp-close:hover::after {
 
 /*# sourceMappingURL=main.css.map */
 
+/* مخفی کردن checkbox */
+.price-item input {
+  display: none;
+}
+
+/* تاگل */
+.toggle-btn {
+  width: 36px;
+  height: 18px;
+  background: #ccc;
+  border-radius: 20px;
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  margin-top: 6px;
+}
+
+.toggle-btn::after {
+  content: "";
+  width: 14px;
+  height: 14px;
+  background: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  transition: 0.3s;
+}
+
+/* قیمت جدید پیش‌فرض مخفی */
+.price.new {
+  display: none;
+  color: green;
+  font-weight: 600;
+}
+
+/* 🔥 جادوی اصلی */
+.price-item:has(input:checked) .price.old {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.price-item:has(input:checked) .price.new {
+  display: inline;
+}
+
+.price-item:has(input:checked) .toggle-btn {
+  background: var(--color-violet);
+}
+
+.price-item:has(input:checked) .toggle-btn::after {
+  transform: translateX(18px);
+}
+
+
+
