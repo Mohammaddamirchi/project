@@ -12438,5 +12438,69 @@ body .mfp-wrap .mfp-container .mfp-content .mfp-close:hover::after {
   transform: translateX(18px);
 }
 
+/* course */
 
 
+.course-card {
+  border: 1px solid #dbe3ef;
+  border-radius: 12px;
+  padding: 16px;
+  background: white;
+  margin-bottom: 12px;
+}
+
+.course-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.course-info {
+  display: flex;
+  gap: 16px;
+}
+
+.course-image {
+  width: 197px;
+  height: 112px;
+  border-radius: 8px;
+}
+
+.course-title {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.course-teacher {
+  font-size: 12px;
+  color: gray;
+}
+
+/* حذف فلش پیشفرض details */
+summary {
+  list-style: none;
+}
+summary::-webkit-details-marker {
+  display: none;
+}
+
+/* چرخش فلش */
+.arrow {
+  transition: transform 0.3s ease;
+}
+details[open] .arrow {
+  transform: rotate(90deg);
+}
+
+/* فاصله زیرمجموعه */
+.submenu {
+  margin-top: 16px;
+}
+
+/* کارت‌های زیرمجموعه کمی فاصله داشته باشند */
+.course-card.child {
+  margin-top: 12px;
+}
+
+/* course */
